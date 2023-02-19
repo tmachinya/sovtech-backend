@@ -5,3 +5,8 @@
 4.	Run the application: Once the dependencies have been installed, you can run the application using the following command: mvn spring-boot:run
 5.	This will start the Spring Boot application and make it available at http://localhost:8080/. 
 6.	NB: To start the frontend, the application must be running.
+
+## Endpoints:
+1. all People:  http://localhost:8080/api/people
+2. all People on a particular page: http://localhost:8080/api/people?page=8
+3. search a person by name: http://localhost:8080/api/people?search=Anakin Skywalker

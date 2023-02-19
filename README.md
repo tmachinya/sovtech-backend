@@ -10,3 +10,6 @@
 1. all People:  http://localhost:8080/api/people
 2. all People on a particular page: http://localhost:8080/api/people?page=8
 3. search a person by name: http://localhost:8080/api/people?search=Anakin Skywalker
+
+## Tests
+there are also unit tests in SwapiControllerTests file

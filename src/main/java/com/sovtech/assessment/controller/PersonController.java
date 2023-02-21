@@ -24,7 +24,7 @@ public class PersonController {
             PeopleResponse<SwapiPerson> response = swapiClient.getPeople(Map.of("page", String.valueOf(page)));
             return ResponseEntity.ok(response.getResults());
         }
-        else return ResponseEntity.ok(swapiClient.getPersonByName(Map.of("search", search)).getResults().get(0));
+        else return ResponseEntity.ok(swapiClient.getPeople(Map.of("search", search)).getResults().get(0));
     }
 
 }

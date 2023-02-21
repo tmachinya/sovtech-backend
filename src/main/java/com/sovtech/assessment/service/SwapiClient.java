@@ -10,6 +10,4 @@ import java.util.Map;
 public interface SwapiClient {
     @RequestLine("GET /people/")
     PeopleResponse<SwapiPerson> getPeople(@QueryMap Map<String, String> options);
-    @RequestLine("GET " + "/people")
-    PeopleResponse<SwapiPerson> getPersonByName(@QueryMap Map<String, String> options);
 }

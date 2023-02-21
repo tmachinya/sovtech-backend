@@ -39,7 +39,7 @@ public class SwapiControllerTests {
         // Set up mock behavior for the swapiClient
         List<SwapiPerson> people = new ArrayList<>();
         people.add(new SwapiPerson("Luke Skywalker", "male", "Tatooine","",""));
-        PeopleResponse<SwapiPerson> response = new PeopleResponse<SwapiPerson>(1,"","",people);
+        PeopleResponse<SwapiPerson> response = new PeopleResponse<>(1, "", "", people);
         when(swapiClient.getPeople(any(Map.class))).thenReturn(response);
 
         // Call the controller method with no search term
@@ -57,8 +57,8 @@ public class SwapiControllerTests {
         // Set up mock behavior for the swapiClient
         List<SwapiPerson> people = new ArrayList<>();
         people.add(new SwapiPerson("Leia Organa", "female", "Alderaan","",""));
-        PeopleResponse<SwapiPerson> response = new PeopleResponse<SwapiPerson>(0,"","",people);
-        when(swapiClient.getPersonByName(any(Map.class))).thenReturn(response);
+        PeopleResponse<SwapiPerson> response = new PeopleResponse<>(0, "", "", people);
+        when(swapiClient.getPeople(any(Map.class))).thenReturn(response);
 
         // Call the controller method with a search term
         ResponseEntity<?> result = swapiController.getPeople(1, "Leia Organa");
